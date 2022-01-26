@@ -1,18 +1,15 @@
 <template>
-<div class="app">
-  <p> {{jobs[0].location}}</p>
-
-</div>
+  <div class="app">
+    <p>{{ jobs[0].location }}</p>
+  </div>
 </template>
 
 <script lang="ts">
-
-import { defineComponent, reactive, ref, toRefs } from 'vue';
-import Job from './types/Job'
-
+import { defineComponent, reactive, ref, toRefs } from "vue";
+import Job from "./types/Job";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
   components: {},
   setup() {
     // const state = reactive({
@@ -21,7 +18,7 @@ export default defineComponent({
 
     // })
 
-    // state.name = 'Shaun' 
+    // state.name = 'Shaun'
     // state.age = '26'
 
     // return { ...toRefs(state)}
@@ -31,16 +28,23 @@ export default defineComponent({
 
     // return { name, age}
 
-  const jobs = ref<Job[]>([
-    { title: 'farm worker',location:'lon lon ranch', salary: 30000, id:'1'},
-    { title: 'farm worker',location:'lon lon ranch', salary: 30000, id:'2'}
-  ])
-    return {jobs}
-  }
+    const jobs = ref<Job[]>([
+      {
+        title: "farm worker",
+        location: "lon lon ranch",
+        salary: 30000,
+        id: "1",
+      },
+      {
+        title: "farm worker",
+        location: "lon lon ranch",
+        salary: 30000,
+        id: "2",
+      },
+    ]);
+    return { jobs };
+  },
 });
 </script>
 
-<style>
-
-</style>
-
+<style></style>
